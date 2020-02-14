@@ -3,6 +3,12 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <style>
+        .row {
+            margin-top: 25vh;
+            /*25% of the total height of the screen */
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,7 +19,7 @@
 
     <div class="row"></div>
     <div class="col s8 offset-s2"></div>
-    <div class="card-panel">
+    <div id="message-form" class="card-panel">
         <form>
             <label>Enter a secret message</label>
             <input id="message-input" />
@@ -22,12 +28,13 @@
         </form>
     </div>
 
-    <div>
-        Share this link with a friend
-        <input id="link-input" />
+    <div id="link-form" class="card-panel hide">
+        <div>
+            Share this link with a friend
+            <input id="link-input" />
+        </div>
+        <script src="index.js"></script>
     </div>
-    <script src="index.js"></script>
-
 </body>
 
 </html>
