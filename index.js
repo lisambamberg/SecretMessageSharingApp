@@ -1,3 +1,7 @@
+const { hash } = window.location;
+console.log(atob(hash.replace("#", "")));
+//If there is a hash already in URL, will unencode message and place into DOM
+
 document.querySelector("form").addEventListener("submit", event => {
   event.preventDefault();
 
