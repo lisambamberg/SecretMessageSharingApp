@@ -5,6 +5,8 @@ document.querySelector("form").addEventListener("submit", event => {
   const encrypted = btoa(input.value);
   //will convert input to base64 string
 
-  document.querySelector("#link-input").value = encrypted;
+  document.querySelector(
+    "#link-input"
+  ).value = `${window.location}#${encrypted}`;
   //will take encryted value and place it in the link-input
 });
