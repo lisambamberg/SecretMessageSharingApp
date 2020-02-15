@@ -1,6 +1,15 @@
 const { hash } = window.location;
-console.log(atob(hash.replace("#", "")));
+
+const message = atob(hash.replace("#", ""));
 //If there is a hash already in URL, will unencode message and place into DOM
+
+if (message) {
+  document.querySelector("#message-form").classList.add("hide");
+  document.querySelector("#message-show").classList.remove("hide");
+
+  document.querySelector("h1").innerHTML = message;
+  //will place the decoded message in h1 tag
+}
 
 document.querySelector("form").addEventListener("submit", event => {
   event.preventDefault();
